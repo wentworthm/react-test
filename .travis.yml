@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t wentworthm/docker-react -f Dockerfile.dev .
+  - docker build -t wentworthm/react-test -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true wentworthm/docker-react npm run test
+  - docker run -e CI=true wentworthm/react-test npm run test
